@@ -1,0 +1,5 @@
+useDynLib(coxrobust)
+export("coxr", "gen_data", "plot.coxr", "print.coxr")
+S3method(print, coxr)
+S3method(plot, coxr)
+S3method(predict, coxr)

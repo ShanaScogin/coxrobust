@@ -1,0 +1,24 @@
+{
+    "id": "A3DD5F75",
+    "path": "~/coxrobust/R/zzz.R",
+    "project_path": "R/zzz.R",
+    "type": "r_source",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1648691270992.0,
+    "source_on_save": false,
+    "relative_order": 6,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1141647512,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1141647512,
+    "read_only": false,
+    "read_only_alternatives": []
+}

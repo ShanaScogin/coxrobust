@@ -1,26 +1,26 @@
 {
-    "id": "62520DF5",
-    "path": "~/coxrobust/DESCRIPTION",
-    "project_path": "DESCRIPTION",
-    "type": "dcf",
+    "id": "E4507366",
+    "path": "~/coxrobust/R/plot.coxr.R",
+    "project_path": "R/plot.coxr.R",
+    "type": "r_source",
     "hash": "0",
     "contents": "",
     "dirty": false,
-    "created": 1648674973014.0,
+    "created": 1648691290336.0,
     "source_on_save": false,
-    "relative_order": 1,
+    "relative_order": 9,
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "27,7",
-        "scrollLine": "8"
+        "cursorPosition": "1,0",
+        "scrollLine": "1"
     },
     "folds": "",
-    "lastKnownWriteTime": 1648747068,
+    "lastKnownWriteTime": 1139474783,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1648747068747,
+    "last_content_update": 1139474783,
     "read_only": false,
     "read_only_alternatives": []
 }
