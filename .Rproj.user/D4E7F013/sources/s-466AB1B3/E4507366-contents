@@ -1,7 +1,55 @@
+#' Plot Diagnostics for a coxr Object
+#'
+#' Graphical tool which in a series of 5 graphs let us compare how well data are
+#' explained by the estimated proportional hazards model with non-robust
+#' (black color) and robust method (green color).  The first graph gives
+#' standardized difference of two estimated survival functions; one via the Cox
+#' model and the other via Kaplan Meier estimator.  The following four graphs
+#' show the same differences for four strata, defined by the quartiles of the
+#' estimated linear predictor.  Comparison of estimation results along with
+#' analysis of the graphs leads frequently to a very detailed information about
+#' the model fit (see examples).
+#'
+#' @param x \code{coxr} object, typically result of \code{\link{coxr}}.
+#' @param caption captions to appear above the plots.
+#' @param xlab title for the x axis.
+#' @param ylab title for the y axis.
+#' @param main overall title for the plot.
+#' @param \dots other parameters to be passed through to plotting functions.
+#' @param color if \code{FALSE} grayscale mode is used.
+#'
+#' @return Data frame containing the following variables:
+#' \itemize{
+#' \item{time}{vector of survival times.}
+#' \item{status}{vector of censoring status.}
+#' \item{X1, X2, \ldots}{explanatory variables (their number is determined by the
+#' dimension of vector of regression coefficients).}
+#' }
+#'
+#' @examples
+#' \dontshow{.old_wd <- setwd(tempdir())}
+#' \donttest{
+#' if (interactive()) {
+#' #use the lung cancer data at Mayo Clinic
+#' #to compare results of non-robust and robust estimation
+#' result <- coxr(Surv(time, status) ~ age + sex + ph.karno + meal.cal + wt.loss, data = lung)
+#' plot(result, main = "Mayo Clinic Lung Cancer Data")
+#' }
+#' }
+#'
+#' \dontshow{setwd(.old_wd)}
+#' @export
 
-plot.coxr <- function(x, caption = c("Full data set", "First quartile",
-    "Second quartile", "Third quartile", "Fourth quartile"), main = NULL,
-    xlab = "log time", ylab = "standardized survival differences", ...,
+plot.coxr <- function(x,
+                      caption = c("Full data set",
+                                  "First quartile",
+                                  "Second quartile",
+                                  "Third quartile",
+                                  "Fourth quartile"),
+                      main = NULL,
+                      xlab = "log time",
+                      ylab = "standardized survival differences",
+                      ...,
     color = TRUE) {
 
     if ( !inherits(x, "coxr") ) {
@@ -40,7 +88,7 @@ plot.coxr <- function(x, caption = c("Full data set", "First quartile",
 
     coxr.draw(expzbeta, expzbeta.ple, logtime, status, x$lambda.ple, x$lambda,
               color)
-    
+
     mtext(caption[1], 3, 0.25)
     if ( !is.null(main) ) {
         title(main = main)
@@ -65,7 +113,7 @@ plot.coxr <- function(x, caption = c("Full data set", "First quartile",
         close.screen(i)
 
     }
-    
+
     close.screen(all = TRUE)
     if ( !is.null(main) ) {
         title(main = main)
@@ -84,7 +132,7 @@ coxr.draw <- function(expzbeta, expzbeta.ple, logtime, status, lam, lamr,
     norm  <- sqrt(km*(1-km))
     gkm   <- km * sqrt( cumsum(status/(n:1)/((n:1)-status)) )
     upper <- 2*gkm/norm
-    
+
     curvr  <- (t(rep(1/n,n))%*%t(exp(-lamr%*%t(expzbeta)))-km)/norm
     curvpl <- (t(rep(1/n,n))%*%t(exp(-lam %*%t(expzbeta.ple)))-km)/norm
 
