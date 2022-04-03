@@ -114,7 +114,7 @@ plot.coxr <- function(x,
 
     }
 
-    close.screen(all = TRUE)
+    close.screen(all.screens = TRUE)
     if ( !is.null(main) ) {
         title(main = main)
     }

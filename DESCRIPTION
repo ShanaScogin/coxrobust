@@ -2,7 +2,7 @@ Package: coxrobust
 Type: Package
 Title: Fit Robustly Proportional Hazards Regression Model
 Version: 1.0.1
-Date: 2022-03-30
+Date: 2022-04-02
 Authors@R: 
     c(person("Tadeusz", 
              "Bednarski", 
@@ -30,3 +30,6 @@ Encoding: UTF-8
 LazyLoad: TRUE
 VignetteBuilder: knitr
 RoxygenNote: 7.1.2
+LinkingTo:
+    Rcpp,
+    RcppArmadillo
