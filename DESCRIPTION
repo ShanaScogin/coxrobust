@@ -21,6 +21,7 @@ Description: An implementation of robust estimation in Cox model. Functionality 
 URL: https://github.com/ShanaScogin/coxrobust
 BugReports: https://github.com/ShanaScogin/coxrobust/issues
 License: GPL-3
+NeedsCompilation: yes
 Imports:
   survival
 Depends: R (>= 2.0.0)
