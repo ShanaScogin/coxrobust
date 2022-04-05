@@ -1,2 +1,16 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
+^cran-comments\.md$
+^CODE_OF_CONDUCT\.md$
+^CONTRIBUTING\.md$
+CONTRIBUTING.md
+^codecov\.yml$
+^docs$
+^pkgdown$
+^pkgdown/_pkgdown\.yml$
+^CRAN-RELEASE$
+^_pkgdown\.yml$
+^revdep$
+^README.Rmd
+^README.log
+^README.tex

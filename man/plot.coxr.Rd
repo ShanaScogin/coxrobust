@@ -35,7 +35,7 @@ Data frame containing the following variables:
 \itemize{
 \item{time}{vector of survival times.}
 \item{status}{vector of censoring status.}
-\item{X1, X2, \ldots}{explanatory variables (their number is determined by the
+\item{X1, X2, ...}{explanatory variables (their number is determined by the
 dimension of vector of regression coefficients).}
 }
 }
@@ -49,17 +49,4 @@ show the same differences for four strata, defined by the quartiles of the
 estimated linear predictor.  Comparison of estimation results along with
 analysis of the graphs leads frequently to a very detailed information about
 the model fit (see examples).
-}
-\examples{
-\dontshow{.old_wd <- setwd(tempdir())}
-\donttest{
-if (interactive()) {
-#use the lung cancer data at Mayo Clinic
-#to compare results of non-robust and robust estimation
-result <- coxr(Surv(time, status) ~ age + sex + ph.karno + meal.cal + wt.loss, data = lung)
-plot(result, main = "Mayo Clinic Lung Cancer Data")
-}
-}
-
-\dontshow{setwd(.old_wd)}
 }
