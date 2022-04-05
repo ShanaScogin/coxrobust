@@ -1,7 +1,0 @@
-coxr                    Fit Robustly Proportional Hazards Regression
-                        Model
-coxr.object             Fit Robustly Proportional Hazards Regression
-                        Object
-gen_data                Generate Data from the Proportional Hazards
-                        Regression Model
-plot.coxr               Plot Diagnostics for a coxr Object
