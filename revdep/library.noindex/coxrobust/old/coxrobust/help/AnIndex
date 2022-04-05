@@ -1,0 +1,6 @@
+coxr	coxr
+coxr.object	coxr.object
+gen_data	gen_data
+plot.coxr	plot.coxr
+predict.coxr	coxr
+print.coxr	coxr

@@ -14,3 +14,4 @@ CONTRIBUTING.md
 ^README.Rmd
 ^README.log
 ^README.tex
+^revdep$
