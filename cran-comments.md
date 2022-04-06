@@ -5,7 +5,7 @@
 There were no ERRORs, WARNINGs, or NOTEs.
 
 ## Downstream dependencies
-No functionality is changing with this release. Function `coxr` used in `modeLLtest` has been tested.
+No functionality is changing with this release. Function `coxr` used in `modeLLtest` has been tested (correctly this time). Test was also added to automatically catch if the function downstream package depends on fails.
 
 ## Winbuilder check results
 Note exists in winbuilder develop about change of maintainer.

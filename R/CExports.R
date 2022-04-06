@@ -1,3 +1,8 @@
+#' @useDynLib coxrobust ple
+#' @useDynLib coxrobust lambda
+#' @useDynLib coxrobust lin
+#' @useDynLib coxrobust re
+
 coxr.ple <- function(beta, time, status, z, nrow, ncol) {
 
   eps <- 1e-06
@@ -6,7 +11,7 @@ coxr.ple <- function(beta, time, status, z, nrow, ncol) {
 
   for (i in 1:iter.max) {
 
-    res <- .Call("ple", as.double(beta), as.double(time),
+    res <- .C("ple", as.double(beta), as.double(time),
                  as.integer(status), as.double(z), as.integer(nrow),
                  as.integer(ncol), res = double(1), gradient = double(ncol),
                  hessian = double(ncol*ncol),
@@ -21,7 +26,7 @@ coxr.ple <- function(beta, time, status, z, nrow, ncol) {
 
     if ( norm <= eps ) {
       beta <- beta_new
-      res <- .Call("ple", as.double(beta), as.double(time),
+      res <- .C("ple", as.double(beta), as.double(time),
                    as.integer(status), as.double(z), as.integer(nrow),
                    as.integer(ncol), res = double(1), gradient = double(ncol),
                    hessian = double(ncol*ncol),
@@ -51,7 +56,7 @@ coxr.re <- function(beta, time, status, z, prev_ezbeta, M, nrow, ncol, f.weight)
 
   for (i in 1:iter.max) {
 
-    res <- .Call("re", as.double(beta), as.double(time), as.integer(status),
+    res <- .C("re", as.double(beta), as.double(time), as.integer(status),
                  as.double(z), as.double(prev_ezbeta), as.double(M),
                  as.integer(nrow),  as.integer(ncol), as.integer(f.weight),
                  res = double(1),  gradient = double(ncol),
@@ -67,7 +72,7 @@ coxr.re <- function(beta, time, status, z, prev_ezbeta, M, nrow, ncol, f.weight)
 
     if ( norm_re <= eps ) {
       beta <- beta_new
-      res <- .Call("re", as.double(beta), as.double(time), as.integer(status),
+      res <- .C("re", as.double(beta), as.double(time), as.integer(status),
                    as.double(z), as.double(prev_ezbeta), as.double(M),
                    as.integer(nrow),  as.integer(ncol), as.integer(f.weight),
                    res = double(1),  gradient = double(ncol),
@@ -92,7 +97,7 @@ coxr.re <- function(beta, time, status, z, prev_ezbeta, M, nrow, ncol, f.weight)
 
 coxr.lambda <- function(beta, time, status, z, prev_exp_zbeta, M, nrow, f.weight) {
 
-  cres <- .Call("lambda", as.double(exp(z %*% beta)), as.double(time),
+  cres <- .C("lambda", as.double(exp(z %*% beta)), as.double(time),
                 as.integer(status), as.double(prev_exp_zbeta), as.double(M),
                 as.integer(nrow), as.integer(f.weight), lmb = double(nrow),
                 PACKAGE = "coxrobust")
@@ -104,7 +109,7 @@ coxr.lambda <- function(beta, time, status, z, prev_exp_zbeta, M, nrow, f.weight
 coxr.covar <- function(beta, time, status, z, prev_exp_zbeta, M, nrow, ncol,
                        f.weight, hessinv) {
 
-  cres <- .Call("lin", as.double( exp(z %*% beta) ), as.double(time),
+  cres <- .C("lin", as.double( exp(z %*% beta) ), as.double(time),
                 as.integer(status), as.double(z), as.double(prev_exp_zbeta),
                 as.double(M), as.integer(nrow), as.integer(ncol),
                 as.integer(f.weight), lin = double(nrow * ncol),
