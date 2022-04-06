@@ -7,4 +7,5 @@ doc
 inst/doc
 *.DS_Store
 .DS_Store
-^revdep$
+^revdep/$
+revdep/
