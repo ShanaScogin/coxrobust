@@ -4,3 +4,5 @@
 + updated DESCRIPTION file with new maintainer information and standardized language in title and description fields
 * added unit testing for `coxr()`
 * fixed minor compiling issues
+
+# coxrobust 1.0.2
