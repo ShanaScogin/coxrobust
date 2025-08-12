@@ -16,10 +16,10 @@
 #'
 #' @return Data frame containing the following variables:
 #' \itemize{
-#' \item{time}{vector of survival times.}
-#' \item{status}{vector of censoring status.}
-#' \item{X1, X2, ...}{explanatory variables (their number is determined by the
-#' dimension of vector of regression coefficients).}
+#' \item \code{time} vector of survival times.
+#' \item \code{status} vector of censoring status.
+#' \item \code{X1, X2, ...} explanatory variables (their number is determined by the
+#' dimension of vector of regression coefficients).
 #' }
 #'
 #' @examples

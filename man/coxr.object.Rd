@@ -20,7 +20,7 @@ The following components must be included in a legitimate \code{coxr} object.
 parameter.}
 
 \item{var}{
-an approximate variance matrix of the coefficients (estimated robustly). 
+an approximate variance matrix of the coefficients (estimated robustly).
 Rows and columns corresponding to any missing coefficients are set to zero.}
 
 \item{ple.var}{

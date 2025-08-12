@@ -18,7 +18,7 @@ coxr(
 \arguments{
 \item{formula}{a formula object, with the response on the left of a \code{~}
 operator, and the terms on the right.  The response must be a
-survival object as returned by the \code{\link{Surv}} function.}
+survival object as returned by the \code{\link[survival]{Surv}} function.}
 
 \item{data}{a data frame in which to interpret the variables
 named in the \code{formula}, or in the \code{subset}.}

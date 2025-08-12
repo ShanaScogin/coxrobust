@@ -6,3 +6,4 @@
 * fixed minor compiling issues
 
 # coxrobust 1.0.2
+* Minor update on request from CRAN to add in links to survival package in documentation

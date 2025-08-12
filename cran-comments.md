@@ -2,13 +2,11 @@
 * win-builder (R-release, R-devel, R-oldrelease)
 
 ## R CMD check results
-There were no ERRORs, WARNINGs, or NOTEs.
+0 ERRORs | 0 WARNINGs | 1 NOTE (`checking for future file timestamps ... NOTE unable to verify current time`), but seems to be an external issue being experienced by other users.
 
 ## Downstream dependencies
-No functionality is changing with this release. Function `coxr` used in `modeLLtest` has been tested (correctly this time). Testthat was also added to automatically catch failure in the function downstream package depends on.
+No functionality is changing with this release. Function `coxr` used in `modeLLtest` has been tested. 
 
-## Winbuilder check results
-Note exists in winbuilder develop about change of maintainer.
+## Comments
 
-## r-hub notes
-There are two r-hub notes 1.) a file called 'coxrobust-manual.tex' that I cannot find and 2.) detritus in the temp directory called 'lastMiKTeXException' that I also cannot resolve. I am not sure if these are artifacts from former releases under previous maintainer, but please let me know if you have suggestions.
+
