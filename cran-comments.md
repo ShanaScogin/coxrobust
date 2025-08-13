@@ -6,7 +6,3 @@
 
 ## Downstream dependencies
 No functionality is changing with this release. Function `coxr` used in `modeLLtest` has been tested. 
-
-## Comments
-
-
