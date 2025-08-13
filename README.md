@@ -1,6 +1,8 @@
 # coxrobust 
 
  [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/coxrobust)](https://CRAN.R-project.org/package=coxrobust)
+ [![CRAN version](https://www.r-pkg.org/badges/version/coxrobust)](https://CRAN.R-project.org/package=coxrobust)
+
 
 An R Package that implements robust estimation in Cox model. 
 
