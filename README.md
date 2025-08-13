@@ -1,6 +1,5 @@
 # coxrobust 
 
-[![R-CMD-check](https://github.com/ShanaScogin/coxrobust/actions/workflows/r-cmd-check.yaml/badge.svg)](https://github.com/ShanaScogin/coxrobust/actions/workflows/r-cmd-check.yaml)
  [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/coxrobust)](https://CRAN.R-project.org/package=coxrobust)
 
 An R Package that implements robust estimation in Cox model. 
